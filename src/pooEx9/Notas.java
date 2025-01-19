@@ -1,7 +1,5 @@
 package pooEx9;
 
-import pooEx3.Aluno;
-
 import java.util.Locale;
 import java.util.Scanner;
 

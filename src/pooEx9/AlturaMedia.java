@@ -13,15 +13,8 @@ public class AlturaMedia {
         return altura;
     }
 
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
-    public char getGenero() {
+      public char getGenero() {
         return genero;
     }
 
-    public void setGenero(char genero) {
-        this.genero = genero;
-    }
 }
