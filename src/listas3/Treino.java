@@ -7,7 +7,7 @@ public class Treino {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        List<Integer> n = new ArrayList<Integer>();
+        List<Integer> n = new ArrayList<>();
         n.add(159);
         n.add(21);
         n.add(53);
