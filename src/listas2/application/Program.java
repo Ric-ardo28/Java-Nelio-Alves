@@ -32,7 +32,7 @@ public class Program {
             String dataString = sc.next();
             LocalDate dataNascimento = LocalDate.parse(dataString, formatter);
 
-            list.<Pessoa>add(new Pessoa(nome, cpf, dataNascimento));
+            //list.<Pessoa>add(new Pessoa(nome, cpf, dataNascimento));
             Pessoa pessoa = new Pessoa(nome, cpf, dataNascimento);
             list.add(pessoa);
             sc.nextLine();
