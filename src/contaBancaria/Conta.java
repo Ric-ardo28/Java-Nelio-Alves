@@ -4,11 +4,13 @@ public class Conta {
 	private String titular;
 	private double saldo = 3333;
 	private int numeroDaConta;
+	private TipoConta tipoConta;
 
-	public Conta(String titular, double saldo, int numeroDaConta) {
+	public Conta(String titular, double saldo, int numeroDaConta, TipoConta tipoConta) {
 		this.titular = titular;
 		this.saldo = saldo;
 		this.numeroDaConta = numeroDaConta;
+		this.tipoConta = tipoConta;
 	}
 
 	public String getTitular() {
@@ -28,6 +30,14 @@ public class Conta {
 		return numeroDaConta;
 	}
 
+	public TipoConta getTipoConta() {
+		return tipoConta;
+	}
+
+	public void setTipoConta(TipoConta tipoConta) {
+		this.tipoConta = tipoConta;
+	}
+
 	public void setNumeroDaConta(int numeroDaConta) {
 		this.numeroDaConta = numeroDaConta;
 	}
@@ -41,5 +51,16 @@ public class Conta {
 	}
 	public void exibirSaldo(){
 		System.out.println(this.saldo);
+	}
+
+	@Override
+	public String toString() {
+		return "Conta{" +
+				"titular '" + titular + '\'' +
+				", saldo " + saldo +
+				", numero Da Conta " + numeroDaConta +
+				", tipoConta " + tipoConta +
+				", descição " + tipoConta.getDescricao() +
+				'}';
 	}
 }

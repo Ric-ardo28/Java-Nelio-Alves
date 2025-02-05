@@ -1,6 +1,7 @@
 package listas4.application;
 
 import listas4.entities.Funcionario;
+import listas4.enums.CargoFuncionario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class Main {
                     System.out.println("Digite o nome do funcionario: ");
                     String nome = sc.nextLine();
                     System.out.println("Digite o cargo do funcionario: ");
-                    String cargo = sc.nextLine();
+                    CargoFuncionario cargo = CargoFuncionario.valueOf(sc.nextLine().toUpperCase());
                     System.out.println("Digite o salario do funcionario: ");
                     double salario = sc.nextDouble();
                     // System.out.println("Digite o ID do funcionario: ");
@@ -56,12 +57,12 @@ public class Main {
                     Funcionario funcionarioAtualizado = listaFuncionarios.stream().filter(f -> f.getIdFuncionario() == idAtualizar).findFirst().orElse(null);
                     if (funcionarioAtualizado != null) {
                         System.out.println("Digite o novo cargo do funcionario: ");
-                        String cargoAtualizado = sc.nextLine();
+                        String cargoAtualizado = sc.nextLine().toUpperCase();
                         System.out.println("Digite o novo salario do funcionario: ");
                         double salarioAtualizado = sc.nextDouble();
                         sc.nextLine();
                         funcionarioAtualizado.setSalario(salarioAtualizado);
-                        funcionarioAtualizado.setCargo(cargoAtualizado);
+                        funcionarioAtualizado.setCargo(CargoFuncionario.valueOf(cargoAtualizado));
 
                         System.out.println("Funcionario atualizado com sucesso!");
 

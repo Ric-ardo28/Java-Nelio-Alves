@@ -12,10 +12,12 @@ public class User {
 		double saldo = 0;
 		System.out.println("Digite o numero da conta: ");
 		int numeroDaConta = sc.nextInt();
+		System.out.printf("Digite o tipo de Conta: ");
+		TipoConta tipoConta = TipoConta.valueOf(sc.next().toUpperCase());
 
 
 
-		Conta conta = new Conta(titular, saldo, numeroDaConta);
+		Conta conta = new Conta(titular, saldo, numeroDaConta, tipoConta);
 
 		System.out.println("digite o valor do deposito: ");
 		double valor = conta.depositar(sc.nextDouble());
@@ -23,5 +25,6 @@ public class User {
 		System.out.println("digite o valor do saque: ");
 		double valorSaque = conta.sacar(sc.nextDouble());
 		conta.exibirSaldo();
+		System.out.printf(conta.toString());
 	}
 }
