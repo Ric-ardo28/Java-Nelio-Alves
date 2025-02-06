@@ -59,7 +59,7 @@ public class Conta {
 				"titular '" + titular + '\'' +
 				", saldo " + saldo +
 				", numero Da Conta " + numeroDaConta +
-				", tipoConta " + tipoConta +
+				", tipoConta " + tipoConta.getNome() +
 				", descição " + tipoConta.getDescricao() +
 				'}';
 	}

@@ -55,7 +55,7 @@ public class Funcionario {
 	public String toString() {
 		return "Funcionario: \n" +
 				"Nome: " + nome + "\n" +
-				"Cargo: " + cargo + "\n" +
+				"Cargo: " + cargo.getNome() + "\n" +
 				"Descrição: " + cargo.getDescricao() + "\n" +
 				"Salario: " + salario + "\n" +
 				"Id: " + idFuncionario + "\n";
