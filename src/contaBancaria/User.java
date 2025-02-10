@@ -3,28 +3,61 @@ package contaBancaria;
 import java.util.Locale;
 import java.util.Scanner;
 
+import static contaBancaria.TipoConta.*;
+
 public class User {
 	public static void main(String[] args) {
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite o nome do titular da conta: ");
-		String titular = sc.nextLine();
-		double saldo = 0;
-		System.out.println("Digite o numero da conta: ");
-		int numeroDaConta = sc.nextInt();
-		System.out.printf("Digite o tipo de Conta: ");
-		TipoConta tipoConta = TipoConta.valueOf(sc.next().toUpperCase());
+
+		Conta co = new Conta("Ricardo", 0.0, 001, CONTA_CORRENTE );
+		ContaEmpresa coe = new ContaEmpresa("Patricia", 0.0, 0002, CONTA_EMPRESA, 500.0);
+
+		// UPCASTING
+
+		Conta co1 = coe;
+		Conta co2 = new ContaEmpresa("Pat", 0.0, 0003, CONTA_EMPRESA, 500.0);
+		Conta co3 = new ContaPoupanca("Helo", 0.0, 0004, CONTA_EMPRESA, 0.01);
+
+		//DOWNCASTING
+
+		ContaEmpresa coe1 = (ContaEmpresa) co2;
+		coe1.emprestimo(100.0);
+
+		//ContaEmpresa coe2 = (ContaEmpresa) co3;
+		if (co3 instanceof ContaEmpresa) {
+			ContaEmpresa coe2 = (ContaEmpresa) co3;
+			coe2.emprestimo(100.0);
+			System.out.println("Emprestimo");
+
+		}
+		if (co3 instanceof ContaPoupanca) {
+			ContaPoupanca coe2 = (ContaPoupanca) co3;
+			coe2.atualizarSaldo();
+			System.out.println("atualizado");
 
 
 
-		Conta conta = new Conta(titular, saldo, numeroDaConta, tipoConta);
+		}
+		co.depositar(2000.0);
+		co.exibirSaldo();
+		co.sacar(500.0);
+		co.exibirSaldo();
 
-		System.out.println("digite o valor do deposito: ");
-		double valor = conta.depositar(sc.nextDouble());
-		conta.exibirSaldo();
-		System.out.println("digite o valor do saque: ");
-		double valorSaque = conta.sacar(sc.nextDouble());
-		conta.exibirSaldo();
-		System.out.printf(conta.toString());
+		ContaPoupanca contaPoupanca = new ContaPoupanca("Ricardo", 1000.0, 21001, CONTA_CORRENTE, 0.01);
+		contaPoupanca.exibirSaldo();
+		contaPoupanca.sacar(500.0);
+		contaPoupanca.exibirSaldo();
+
+		Conta co4 = new ContaEmpresa("Pat", 1000.0, 0003, CONTA_EMPRESA, 500.0);
+		co4.sacar(200.0);
+		co4.exibirSaldo();
+
+
+
+
+
+
+
+
+
 	}
 }

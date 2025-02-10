@@ -2,9 +2,13 @@ package contaBancaria;
 
 public class Conta {
 	private String titular;
-	private double saldo = 3333;
+	protected double saldo = 3333;
 	private int numeroDaConta;
 	private TipoConta tipoConta;
+
+	public Conta() {
+
+	}
 
 	public Conta(String titular, double saldo, int numeroDaConta, TipoConta tipoConta) {
 		this.titular = titular;
@@ -41,26 +45,23 @@ public class Conta {
 	public void setNumeroDaConta(int numeroDaConta) {
 		this.numeroDaConta = numeroDaConta;
 	}
+
 	public double depositar(double valor) {
 		this.saldo += valor;
 		return valor;
 	}
-	public double sacar(double valor) {
-		this.saldo -= valor;
-		return valor;
+
+	public void sacar(double valor) {
+		saldo -= valor + 5.0;
+
 	}
-	public void exibirSaldo(){
+
+	public void exibirSaldo() {
 		System.out.println(this.saldo);
 	}
 
 	@Override
 	public String toString() {
-		return "Conta{" +
-				"titular '" + titular + '\'' +
-				", saldo " + saldo +
-				", numero Da Conta " + numeroDaConta +
-				", tipoConta " + tipoConta.getNome() +
-				", descição " + tipoConta.getDescricao() +
-				'}';
+		return "Conta{" + "titular '" + titular + '\'' + ", saldo " + saldo + ", numero Da Conta " + numeroDaConta + ", tipoConta " + tipoConta.getNome() + ", descição " + tipoConta.getDescricao() + '}';
 	}
 }
