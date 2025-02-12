@@ -18,7 +18,7 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-		System.out.println("Entre com os Dados do cliente");
+		System.out.println("Entre com os teste.Dados do cliente");
 		System.out.print("Nome: ");
 		String nome = sc.nextLine();
 		System.out.print("E-mail: ");
@@ -29,25 +29,25 @@ public class Program {
 		Client client = new Client(nome, email, dataNascimento);
 
 		System.out.println("Entre com os dados do Pedido");
-		System.out.printf("Status: ");
+		System.out.print("Status: ");
 		PedidoStatus status = PedidoStatus.valueOf(sc.next().toUpperCase());
 
 		Pedido pedido = new Pedido(new Date(), status, client);
 
-		System.out.printf("Quantidade de items do pedido: ");
-		Integer quantidade = sc.nextInt();
+		System.out.print("Quantidade de items do pedido: ");
+		int quantidade = sc.nextInt();
 		sc.nextLine();
 
 		for (int i = 0; i < quantidade; i++) {
 			System.out.println("Entre com os dados do #" + (i + 1) + " item: ");
-			System.out.printf("Nome do Produto: ");
+			System.out.print("Nome do Produto: ");
 			String nomeItem = sc.nextLine();
-			System.out.printf("Valor do Produto: ");
+			System.out.print("Valor do Produto: ");
 			Double valorItem = sc.nextDouble();
 
 			Protudo protudo = new Protudo(nomeItem, valorItem);
 
-			System.out.printf("Quantidade do Produto: ");
+			System.out.print("Quantidade do Produto: ");
 			int quantidadeProduto = sc.nextInt();
 			sc.nextLine();
 
@@ -58,7 +58,7 @@ public class Program {
 
 
 		}
-		System.out.println("");
+		System.out.println();
 		System.out.println("Sumario do pedido: ");
 		System.out.println(String.valueOf(pedido));
 

@@ -7,11 +7,11 @@ Este repositório contém os exercícios, desafios e atividades desenvolvidas ao
 * # 🚀 Tecnologias e Conceitos Estudados  
 ✔️ Java (Linguagem principal)  
 ✔️ Programação Orientada a Objetos (POO)  
-✔️ Estruturas de Dados (Arrays, Listas, Mapas)  
+✔️ Estruturas de teste.Dados (Arrays, Listas, Mapas)  
 ✔️ Tratamento de Exceções  
 ✔️ Manipulação de Arquivos  
 ✔️ Uso de Enumerações  
-✔️ Conceitos de Banco de Dados (futuramente)  
+✔️ Conceitos de Banco de teste.Dados (futuramente)  
 
 * # 🤝 Contribuições
 Este repositório é focado no meu aprendizado, mas se você quiser contribuir com sugestões, sinta-se à vontade para abrir uma issue ou enviar um pull request! 🚀

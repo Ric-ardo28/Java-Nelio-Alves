@@ -26,19 +26,19 @@ public class Terminal {
         }else {
             contaBancaria = new ContaBancaria(numeroConta, titular);
         }
-        System.out.println("Dados da conta: ");
+        System.out.println("teste.Dados da conta: ");
         System.out.println(contaBancaria);
 
         System.out.println("Entre com o valor do deposito: ");
         contaBancaria.depositar(sc.nextDouble());
 
-        System.out.println("Dados da conta atualizados ");
+        System.out.println("teste.Dados da conta atualizados ");
         System.out.println(contaBancaria);
 
         System.out.println("Entre com o valor de saque: ");
         contaBancaria.sacar(sc.nextDouble());
 
-        System.out.println("Dados da conta atualizados ");
+        System.out.println("teste.Dados da conta atualizados ");
         System.out.println(contaBancaria);
 
 

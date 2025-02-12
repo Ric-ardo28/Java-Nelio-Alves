@@ -1,6 +1,8 @@
 package listas4.application;
 
+import listas4.entities.Endereco;
 import listas4.entities.Funcionario;
+import listas4.entities.Motorista;
 import listas4.enums.CargoFuncionario;
 
 import java.util.ArrayList;
@@ -37,13 +39,35 @@ public class Main {
 					String nome = sc.nextLine();
 					System.out.println("Digite o cargo do funcionario: ");
 					CargoFuncionario cargo = CargoFuncionario.valueOf(sc.nextLine().toUpperCase());
+
 					double salario = cargo.getSalario();
 
+					System.out.println("Digite o endereço do funcionario: ");
+					System.out.println("Digite Rua: ");
+					String rua = sc.nextLine();
+					System.out.println("Digite Numero: ");
+					int numero = sc.nextInt();
+					sc.nextLine();
+					System.out.println("Digite o Cep: ");
+					String cep = sc.nextLine();
+					System.out.println("Digite o  Bairro: ");
+					String bairro = sc.nextLine();
+					System.out.println("Digite o  Cidade: ");
+					String cidade = sc.nextLine();
+					System.out.println("Digite o  Estado: ");
+					String estado = sc.nextLine();
 
+					Endereco endereco = new Endereco(rua,numero,cep,bairro,cidade,estado);
 
-
-					Funcionario funcionario = new Funcionario(nome, cargo, salario, idFuncionario);
-					listaFuncionarios.add(funcionario);
+					if(cargo == CargoFuncionario.MOTORISTA) {
+						System.out.println("Qual a cetegoria da CNH: ");
+						String categoriaCnh = sc.nextLine();
+						Motorista motorista = new Motorista(nome, cargo, salario, endereco, idFuncionario, categoriaCnh);
+						listaFuncionarios.add(motorista);
+					}else {
+						Funcionario funcionario = new Funcionario(nome, cargo, salario, endereco, idFuncionario);
+						listaFuncionarios.add(funcionario);
+					}
 					System.out.println("Funcionario adicionado com sucesso!");
 					idFuncionario++;
 					break;

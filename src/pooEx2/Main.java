@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Qual a porcentagem de aumento do salario: ");
         funcionario.aumentarSalario(sc.nextDouble());
 
-        System.out.println("Dados atualizados: " + funcionario);
+        System.out.println("teste.Dados atualizados: " + funcionario);
 
 
         sc.close();

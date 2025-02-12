@@ -1,3 +1,5 @@
+package teste;
+
 import java.util.Random;
 
 public class Matriz {
@@ -15,11 +17,11 @@ public class Matriz {
                 matrizC[i][j] = matrizA[i][j] + matrizB[i][j];
             }
         }
-        System.out.println("Matriz A:");
+        System.out.println("teste.Matriz A:");
         imprimirMatriz(matrizA);
-        System.out.println("Matriz B:");
+        System.out.println("teste.Matriz B:");
         imprimirMatriz(matrizB);
-        System.out.println("Matriz C:");
+        System.out.println("teste.Matriz C:");
         imprimirMatriz(matrizC);
     }
     public static void imprimirMatriz(int[][] matriz) {

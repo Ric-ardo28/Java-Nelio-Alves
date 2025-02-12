@@ -17,7 +17,7 @@ public class Main {
         double mediaAlturas = 0;
         for (int i = 0; i < n; i++) {
             sc.nextLine();
-            System.out.println("Dados da " + (i + 1) + "º pessoa: ");
+            System.out.println("teste.Dados da " + (i + 1) + "º pessoa: ");
 
             System.out.print("Nome: ");
             String nome = sc.nextLine();

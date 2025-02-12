@@ -3,8 +3,9 @@ package listas4.enums;
 public enum CargoFuncionario {
 	GERENTE("Gerente Geral", "Gerente", 9000.00),
 	SUPERVISOR("Supervisor de Patio", "Supervisor", 7000.00),
-	CONFERENTE("Conferente de Carga","Conferente", 5000.00),
-	AJUDANTE("Ajudante de Armazem", "Ajudante", 3000.00);
+	CONFERENTE("Conferente de Carga", "Conferente", 5000.00),
+	AJUDANTE("Ajudante de Armazem", "Ajudante", 3000.00),
+	MOTORISTA("Motorista de entregas", "Motorista", 5500.00),;
 
 	private String descricao;
 	private String nome;
@@ -15,10 +16,12 @@ public enum CargoFuncionario {
 		this.nome = nome;
 		this.salario = salario;
 	}
+
 	public String getDescricao() {
 		return descricao;
 	}
-	public String getNome(){
+
+	public String getNome() {
 		return nome;
 	}
 

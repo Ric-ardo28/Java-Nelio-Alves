@@ -47,6 +47,7 @@ public class Pedido {
 			sb.append(item.toString() + "\n");
 
 		}
+		sb.append("Hora do pedido: " + sd.format(momento) + "\n");
 		sb.append("Valor Total dos items: $" + somaTotal() + "\n");
 		return sb.toString();
 	}

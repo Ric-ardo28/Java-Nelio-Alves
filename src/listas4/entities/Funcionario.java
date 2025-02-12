@@ -6,12 +6,14 @@ public class Funcionario {
 	private String nome;
 	private CargoFuncionario cargo;
 	private Double salario;
+	private Endereco endereco;
 	private Integer idFuncionario;
 
-	public Funcionario(String nome, CargoFuncionario cargo, Double salario, Integer idFuncionario) {
+	public Funcionario(String nome, CargoFuncionario cargo, Double salario, Endereco endereco, Integer idFuncionario) {
 		this.nome = nome;
 		this.cargo = cargo;
 		this.salario = salario;
+		this.endereco = endereco;
 		this.idFuncionario = idFuncionario;
 	}
 
@@ -58,6 +60,7 @@ public class Funcionario {
 				"Cargo: " + cargo.getNome() + "\n" +
 				"Descrição: " + cargo.getDescricao() + "\n" +
 				"Salario: " + salario + "\n" +
+				"Endereço: " + endereco + "\n" +
 				"Id: " + idFuncionario + "\n";
 
 	}

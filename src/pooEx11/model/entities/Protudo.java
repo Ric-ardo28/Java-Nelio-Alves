@@ -24,4 +24,5 @@ public class Protudo {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+
 }

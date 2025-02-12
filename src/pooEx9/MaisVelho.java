@@ -13,7 +13,7 @@ public class MaisVelho {
 
         PessoaVelho[] pessoa = new PessoaVelho[n];
         for (int i = 0; i < n; i++) {
-            System.out.println("Dados da " + (i + 1) + "º Pessoa: ");
+            System.out.println("teste.Dados da " + (i + 1) + "º Pessoa: ");
             System.out.print("Nome: ");
             String nome = sc.next();
             System.out.print("Idade: ");
