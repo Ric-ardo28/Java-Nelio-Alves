@@ -24,8 +24,8 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-	public void tagPreco(){
-		System.out.println(getNome() + " $ " + getPreco());
+	public String tagPreco(){
+		return nome + " $ " + preco;
 	}
 
 

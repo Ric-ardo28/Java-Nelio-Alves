@@ -15,9 +15,14 @@ public class ProdutoImportado extends Produto {
 	public void setTaxaPreco(Double taxaPreco) {
 		this.taxaPreco = taxaPreco;
 	}
+	public double precoTotal() {
+		return getPreco() + taxaPreco;
+	}
 
 	@Override
-	public void tagPreco() {
-		super.tagPreco();
+	public String tagPreco() {
+		return getNome() +
+				" $ " + String.format("%.2f", precoTotal()) +
+				"(Valor da Taxa +" + String.format("%.2f", taxaPreco) + ")";
 	}
 }
