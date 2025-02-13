@@ -1,10 +1,13 @@
 package pooEx13.entities;
 
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 import java.time.format.DateTimeFormatter;
 
 public class ProdutoUsado extends Produto {
+
+
 	private LocalDate dataFaturamento;
 
 	public ProdutoUsado(String nome, Double preco, LocalDate dataFaturamento) {
@@ -23,6 +26,6 @@ public class ProdutoUsado extends Produto {
 	public String tagPreco() {
 		return getNome() +
 				" (usado) $ " + String.format("%.2f", getPreco()) +
-				"(Data de faturamento: " + dataFaturamento.format(DateTimeFormatter.ofPattern("dd/mm/yyyy")) + ")";
+				"(Data de faturamento: " + dataFaturamento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ")";
 	}
 }

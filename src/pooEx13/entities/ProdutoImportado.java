@@ -23,6 +23,7 @@ public class ProdutoImportado extends Produto {
 	public String tagPreco() {
 		return getNome() +
 				" $ " + String.format("%.2f", precoTotal()) +
-				"(Valor da Taxa +" + String.format("%.2f", taxaPreco) + ")";
+
+				"( Valor da Taxa $" + String.format("%.2f", taxaPreco) + ")";
 	}
 }
