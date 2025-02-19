@@ -55,8 +55,9 @@ public class Program {
 
 		Aluguel aluguel = new Aluguel(carro, cliente, dataInicio, dataFim);
 
-		aluguel.imprimirInformacoes();
-		aluguel.calcularValor();
+		//aluguel.imprimirInformacoes();
+		//aluguel.calcularValor();
+		System.out.println(aluguel);
 
 		sc.close();
 
