@@ -1,5 +1,7 @@
 package pooEx19.model.entities;
 
+import pooEx19.model.exceptions.NegociosException;
+
 public class ContaBancaria {
 	private Integer numeroConta;
 	private String titular;
@@ -40,14 +42,26 @@ public class ContaBancaria {
 	public Double getLimiteSaque() {
 		return limiteSaque;
 	}
+
 	public void setLimiteSaque(Double limiteSaque) {
 		this.limiteSaque = limiteSaque;
 	}
 
 	public void depositar(Double valor) {
+
 		saldo += valor;
 	}
+
 	public void sacar(Double valor) {
+		validarSaque(valor);
 		saldo -= valor;
+	}
+	private void validarSaque(Double valor) {
+		if(valor > getLimiteSaque()) {
+			throw new NegociosException("Erro de saque: Valor excede o limite de saque");
+		}
+		if(valor > getSaldo()){
+			throw new NegociosException("Erro de saque: Valor excede o saldo");
+		}
 	}
 }

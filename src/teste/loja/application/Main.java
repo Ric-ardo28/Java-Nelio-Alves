@@ -21,26 +21,34 @@ public class Main {
 		System.out.printf("Quantos produtos deseja cadastrar: ");
 		int n = sc.nextInt();
 		sc.nextLine();
-		for (int i = 0; i < n; i++) {
-			System.out.printf("Qual o nome do produto: ");
-			String nome = sc.next();
-			System.out.printf("Qual o preço produto: ");
-			double preco = sc.nextDouble();
+		try {
 
 
-			Produto produto = new Produto(nome, preco);
+			for (int i = 0; i < n; i++) {
+				System.out.printf("Qual o nome do produto: ");
+				String nome = sc.nextLine();
+				System.out.printf("Qual o preço produto: ");
+				double preco = sc.nextDouble();
 
-			System.out.printf("Qual a quantidade do produto: ");
-			int quantidade = sc.nextInt();
-			sc.nextLine();
 
-			ItemPedido itemPedido = new ItemPedido(produto, quantidade);
+				Produto produto = new Produto(nome, preco);
 
-			pedido.adicionarItem(itemPedido);
+				System.out.printf("Qual a quantidade do produto: ");
+				int quantidade = sc.nextInt();
+				sc.nextLine();
 
+				ItemPedido itemPedido = new ItemPedido(produto, quantidade);
+
+				pedido.adicionarItem(itemPedido);
+
+
+			}
+			System.out.printf(String.valueOf(pedido));
+		}
+		catch (IllegalArgumentException e) {
+			System.out.println("Erro ao criar o Produto: " + e.getMessage());
 
 		}
-		System.out.printf(String.valueOf(pedido));
 
 			sc.close();
 	}

@@ -5,6 +5,9 @@ public class Produto {
 	double preco;
 
 	public Produto(String nome, double preco) {
+		if(preco <= 0){
+			throw new IllegalArgumentException("O preço não pode ser negativo");
+		}
 		this.nome = nome;
 		this.preco = preco;
 	}
