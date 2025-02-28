@@ -4,11 +4,10 @@ import teste.aluguelCarro.model.Aluguel;
 import teste.aluguelCarro.model.Carro;
 import teste.aluguelCarro.model.Cliente;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -48,13 +47,21 @@ public class Program {
 
 		Carro carro = new Carro(marca, modelo, cor, ano, placa, preco);
 		sc.nextLine();
-		System.out.println("Digite a data de inicio do aluguel: (dd/MM/yyyy) ");
-		LocalDate dataInicio = LocalDate.parse(sc.next(), dtf);
-		System.out.println("Digite a data de fim do aluguel: (dd/MM/yyyy) ");
-		LocalDate dataFim = LocalDate.parse(sc.next(), dtf);
+		Aluguel aluguel = null;
+		try {
+			System.out.println("Digite a data de inicio do aluguel: (dd/MM/yyyy) ");
+			LocalDate dataInicio = LocalDate.parse(sc.next(), dtf);
+			if (dataInicio.isBefore(LocalDate.now())) {
+				throw new IllegalArgumentException("A data de aluguel nao pode ser anterior a data de Hoje !! ");
+			}
+			System.out.println("Digite a data de fim do aluguel: (dd/MM/yyyy) ");
+			LocalDate dataFim = LocalDate.parse(sc.next(), dtf);
 
-		Aluguel aluguel = new Aluguel(carro, cliente, dataInicio, dataFim);
+			aluguel = new Aluguel(carro, cliente, dataInicio, dataFim);
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
 
+		}
 		//aluguel.imprimirInformacoes();
 		//aluguel.calcularValor();
 		System.out.println(aluguel);
