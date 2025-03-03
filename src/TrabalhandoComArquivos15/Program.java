@@ -1,28 +1,23 @@
 package TrabalhandoComArquivos15;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Program {
 	public static void main(String[] args)  {
 
 		File arquivo = new File("c:\\temp\\in.txt.txt");
-		Scanner sc = null;
-		try {
-			sc = new Scanner(arquivo);
-			while (sc.hasNextLine()) {
-				System.out.println(sc.nextLine());
+
+		try(BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
+			String linha = br.readLine();
+
+			while (linha != null) {
+				System.out.println(linha);
+				linha = br.readLine();
 			}
 		}
 		catch (IOException e) {
 			System.out.println(" Erro:  " + e.getMessage());
-		}
-		finally {
-			if (sc != null) {
-				sc.close();
-			}
 		}
 
 	}
