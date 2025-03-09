@@ -1,9 +1,9 @@
-package interfaceJava.application;
+package interfaceJava.aluguelCarro.application;
 
-import interfaceJava.model.Services.BrazilTaxService;
-import interfaceJava.model.Services.RentalService;
-import interfaceJava.model.entities.CarRental;
-import interfaceJava.model.entities.Vehicle;
+import interfaceJava.aluguelCarro.model.Services.BrazilTaxService;
+import interfaceJava.aluguelCarro.model.Services.RentalService;
+import interfaceJava.aluguelCarro.model.entities.CarRental;
+import interfaceJava.aluguelCarro.model.entities.Vehicle;
 
 import java.text.ParseException;
 import java.time.LocalDateTime;

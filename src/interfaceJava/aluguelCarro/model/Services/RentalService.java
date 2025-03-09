@@ -1,7 +1,7 @@
-package interfaceJava.model.Services;
+package interfaceJava.aluguelCarro.model.Services;
 
-import interfaceJava.model.entities.CarRental;
-import interfaceJava.model.entities.Invoice;
+import interfaceJava.aluguelCarro.model.entities.CarRental;
+import interfaceJava.aluguelCarro.model.entities.Invoice;
 
 import java.time.Duration;
 

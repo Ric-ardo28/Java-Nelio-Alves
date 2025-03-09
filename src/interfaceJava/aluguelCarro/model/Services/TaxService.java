@@ -1,4 +1,4 @@
-package interfaceJava.model.Services;
+package interfaceJava.aluguelCarro.model.Services;
 
 public interface TaxService {
 

@@ -1,4 +1,4 @@
-package interfaceJava.model.entities;
+package interfaceJava.aluguelCarro.model.entities;
 
 import java.time.LocalDateTime;
 

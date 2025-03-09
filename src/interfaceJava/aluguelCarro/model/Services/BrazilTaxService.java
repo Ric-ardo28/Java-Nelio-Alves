@@ -1,6 +1,4 @@
-package interfaceJava.model.Services;
-
-import interfaceJava.model.Services.TaxService;
+package interfaceJava.aluguelCarro.model.Services;
 
 public class BrazilTaxService implements TaxService {
 
