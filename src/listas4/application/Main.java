@@ -2,6 +2,7 @@ package listas4.application;
 
 import listas4.entities.Endereco;
 import listas4.entities.Funcionario;
+import listas4.entities.FuncionarioWriter;
 import listas4.entities.Motorista;
 import listas4.enums.CargoFuncionario;
 
@@ -67,7 +68,9 @@ public class Main {
 					}else {
 						Funcionario funcionario = new Funcionario(nome, cargo, salario, endereco, idFuncionario);
 						listaFuncionarios.add(funcionario);
+						FuncionarioWriter.salvarFuncionario(funcionario,"Funcionarios.txt");
 					}
+
 					System.out.println("Funcionario adicionado com sucesso!");
 					idFuncionario++;
 					break;
@@ -87,6 +90,7 @@ public class Main {
 						funcionarioAtualizado.setSalario(salarioAtualizado);
 						funcionarioAtualizado.setCargo(CargoFuncionario.valueOf(cargoAtualizado));
 
+						FuncionarioWriter.atualizarFuncionario(listaFuncionarios,"FuncionariosAt.txt");
 						System.out.println("Funcionario atualizado com sucesso!");
 
 					} else {
@@ -102,6 +106,7 @@ public class Main {
 
 					boolean removido = listaFuncionarios.removeIf(f -> f.getIdFuncionario() == idRemover);
 					if (removido) {
+						FuncionarioWriter.atualizarFuncionario(listaFuncionarios,"FuncionariosAt.txt");
 						System.out.println("Funcionario removido com sucesso!");
 
 					} else {
@@ -131,6 +136,7 @@ public class Main {
 
 						funcionarioReajuste.aumentarSalario(porcentagem);
 
+						FuncionarioWriter.atualizarFuncionario(listaFuncionarios,"FuncionariosAt.txt");
 						System.out.println("Reajuste aplicado! Novo salário: " + funcionarioReajuste.getSalario());
 					} else {
 						System.out.println("Funcionario com ID " + idReajuste + " não encontrado.");

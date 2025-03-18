@@ -73,6 +73,7 @@ public class Funcionario implements Imposto {
 	}
 
 
+
 	@Override
 	public String toString() {
 		return "Funcionario: \n" +
