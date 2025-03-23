@@ -1,0 +1,32 @@
+Funcionario: 
+Nome: Ricardo Rodrigues Santana
+Cargo: Gerente
+Descrição: Gerente Geral
+Salario Bruto: 10350.0
+Salario Liguido: R$ 9207.96
+Desconto inss: 1142.04
+Endereço:  rua: Luz do Sol 
+ numero: 126
+ cep: 08257100
+ bairro: Itaquera
+ cidade: São Paulo
+ estado: SP
+
+Id: 1
+
+Funcionario: 
+Nome: Patricia Pereira Oliveira
+Cargo: Ajudante
+Descrição: Ajudante de Armazem
+Salario Bruto: 3000.0
+Salario Liguido: R$ 2640.00
+Desconto inss: 360.00
+Endereço:  rua: Itaquera
+ numero: 109
+ cep: 08420740
+ bairro: Itaquera
+ cidade: São Paulo
+ estado: SP
+
+Id: 2
+

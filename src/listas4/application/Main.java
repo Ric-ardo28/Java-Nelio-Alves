@@ -36,8 +36,8 @@ public class Main {
 
 				case 1:
 					sc.nextLine();
-					System.out.println("Digite o nome do funcionario: ");
-					String nome = sc.nextLine();
+					String nome = validarNome(sc);
+
 					System.out.println("Digite o cargo do funcionario: ");
 					CargoFuncionario cargo = CargoFuncionario.valueOf(sc.nextLine().toUpperCase());
 
@@ -68,7 +68,7 @@ public class Main {
 					}else {
 						Funcionario funcionario = new Funcionario(nome, cargo, salario, endereco, idFuncionario);
 						listaFuncionarios.add(funcionario);
-						FuncionarioWriter.salvarFuncionario(funcionario,"Funcionarios.txt");
+						FuncionarioWriter.salvarFuncionario(funcionario,"Funcionarios.xml");
 					}
 
 					System.out.println("Funcionario adicionado com sucesso!");
@@ -90,7 +90,7 @@ public class Main {
 						funcionarioAtualizado.setSalario(salarioAtualizado);
 						funcionarioAtualizado.setCargo(CargoFuncionario.valueOf(cargoAtualizado));
 
-						FuncionarioWriter.atualizarFuncionario(listaFuncionarios,"FuncionariosAt.txt");
+						FuncionarioWriter.atualizarFuncionario(listaFuncionarios,"FuncionariosAt.xml");
 						System.out.println("Funcionario atualizado com sucesso!");
 
 					} else {
@@ -156,6 +156,18 @@ public class Main {
 		}
 
 		sc.close();
+
+	}
+
+	public static String validarNome(Scanner sc) {
+		System.out.println("Digite o nome do funcionario: ");
+		String nome = sc.nextLine();
+
+		if(nome == null || !nome.matches("[a-zA-Z ]*")) {
+			System.out.println("Nome invalido: não pode conter numeros ou caracteres especiais ");
+			return validarNome(sc);
+		}
+		return nome;
 
 	}
 }
