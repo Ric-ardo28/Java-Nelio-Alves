@@ -30,3 +30,19 @@ Endereço:  rua: 4
 
 Id: 2
 
+Funcionario: 
+Nome: ric
+Cargo: Gerente
+Descrição: Gerente Geral
+Salario Bruto: 9000.0
+Salario Liguido: R$ 7857.96
+Desconto inss: 1142.04
+Endereço:  rua: luz do sol
+ numero: 126
+ cep: 08255
+ bairro: ita
+ cidade: sp
+ estado: sp
+
+Id: 1
+
