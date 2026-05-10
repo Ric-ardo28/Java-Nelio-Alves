@@ -3,6 +3,8 @@ package lambda.funcoes;
 import java.util.List;
 import java.util.function.Predicate;
 
+//Funções que recebe funções como parâmetro
+
 public class ProdutoService {
     // Este metodo soma os precos dos produtos que passam em um criterio.
     //
