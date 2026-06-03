@@ -16,14 +16,19 @@ public class MainFunction {
         produtos.add(new Produto("HD Case", 80.00));
         produtos.add(new Produto("Monitor", 750.00));
 
-       List<String> nomes1 = produtos.stream().map(p -> p.getNome()).toList();
+      // List<String> nomes1 = produtos.stream().map(p -> p.getNome()).toList();
        //List<String> nomes2 = produtos.stream().map(p -> p.getNome()).collect(Collectors.toList());
        //List<String> nomes3 = produtos.stream().map(Produto::getNome).toList();
 
        // produtos.stream().filter(p -> p.getPreco() <= 100.0).map(p -> p.getNome()).forEach(System.out::println);
 
-        nomes1.forEach(System.out::println);
+        //List<String> nomes = produtos.stream().filter(p -> p.getPreco() < 500.0).map(p -> p.getNome()).collect(Collectors.toList());
+        //List<String> nomes5 = produtos.stream().filter(p -> p.getPreco() < 500.0).map(Produto::getNome).toList();
 
+        Double total = produtos.stream().map(p-> p.getPreco()).reduce(0.0, Double::sum);
+
+
+        System.out.println(total);
 
 
     }
